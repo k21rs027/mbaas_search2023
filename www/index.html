@@ -21,6 +21,11 @@
         .then(function(results) {
           showResults(results);
         })
+         var audioElement;
+         var srcFile= "pin.wav";
+         var timer;
+         
+
     }
     function searchName() {
         let name = $("#name").val();
@@ -46,8 +51,8 @@
     }          
  
 
-    function searchkinds() {
-        let name = $("#kinds").val();
+   function searchKinds() {
+        let kinds = $("#kinds").val();
         let TestDataClass = ncmb.DataStore(db);
         TestDataClass
         .equalTo("kinds", kinds)
